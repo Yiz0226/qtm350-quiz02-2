@@ -1,0 +1,37 @@
+[
+  {
+    "objectID": "life-population.html",
+    "href": "life-population.html",
+    "title": "Life vs. Population Analysis",
+    "section": "",
+    "text": "From our graph, we see that life expetancy and population size are possitively correlated\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\ndata&lt;-read.csv(\"gapminder.csv\")\nlife&lt;-data$life_expectancy\npop&lt;-data$population_millions\nggplot(data, aes(x=life, y=pop))+geom_line(color=\"blue\")"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Break Down of the Gapminder Data",
+    "section": "",
+    "text": "The Gapminder.csv is a dataset that contains information on the number of population and average life expectancy cross 142 continents from 1952 to 2007.\nLife Expectancy and GDP per Capita\nLife Expectancy and Population\nCountry Analysise"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "country.html",
+    "href": "country.html",
+    "title": "Country Development Monitor",
+    "section": "",
+    "text": "This page shows the trend in population size, life expectancy and gpd per capita in Italy.\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\ndata&lt;-read.csv(\"gapminder.csv\")\ndata_I &lt;- subset(data, country == \"Italy\")\nlife&lt;-data_I$life_expectancy\npop&lt;-data_I$population_millions\ngdp&lt;-data_I$gdp_per_capita\na&lt;-ggplot(data_I, aes(x=year, y=pop))+geom_line(color=\"blue\")\nb&lt;-ggplot(data_I, aes(x=year, y=gdp))+geom_line(color=\"blue\")\nc&lt;-ggplot(data_I, aes(x=year, y=life))+geom_line(color=\"blue\")\n\nshow(a)\n\n\n\n\n\n\n\nshow(b)\n\n\n\n\n\n\n\nshow(c)"
+  },
+  {
+    "objectID": "life-gdp.html",
+    "href": "life-gdp.html",
+    "title": "Life Gdp Analysis",
+    "section": "",
+    "text": "From our graph, we see that life expetancy and gdp per-capita are strongly, possitively correlated\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\ndata&lt;-read.csv(\"gapminder.csv\")\nlife&lt;-data$life_expectancy\ngdp&lt;-data$gdp_per_capita\nggplot(data, aes(x=life, y=gdp))+geom_line(color=\"blue\")"
+  }
+]
