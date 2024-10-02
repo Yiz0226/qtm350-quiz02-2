@@ -1,0 +1,7 @@
+---
+title: "Break Down of the Gapminder Data"
+---
+
+The Gapminder.csv is a dataset that contains information on the number of population and average life expectancy cross 142 continents from 1952 to 2007.
+
+To learn more about Quarto websites visit <https://quarto.org/docs/websites>.

@@ -1,0 +1,29 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Yizhou's 350 Quiz 2"
+  page-navigation: true
+  back-to-top-navigation: true
+  reader-mode: true
+  repo-url: https://github.com/Yiz0226/qtm350-quiz02
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: life-gdp.qmd
+        text: Life vs. GDP Analysis
+      - href: life-population.qmd
+        text: Life vs. Population Analysis
+      - href: country.qmd
+        text: Country
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+
+
